@@ -19,6 +19,10 @@ namespace CG.Runtime
         #region Fields
 
         private string _baseDirectory;
+        private string _dynamicDirectory;
+        private string _relativeSearchDirectory;
+        private string _applicationDirectory;
+
         private AssemblyDependencyResolver _resolver;
 
         #endregion
@@ -54,8 +58,11 @@ namespace CG.Runtime
                     nameof(baseDirectory)
                     );
 
-            // Save the path.
+            // Save the values.
             _baseDirectory = baseDirectory;
+            _dynamicDirectory = AppDomain.CurrentDomain.DynamicDirectory;
+            _relativeSearchDirectory = AppDomain.CurrentDomain.RelativeSearchPath;
+            _applicationDirectory = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 
             // Create the dependency resolver.
             _resolver = new AssemblyDependencyResolver(
@@ -78,8 +85,11 @@ namespace CG.Runtime
             bool isCollectible
             ) : base(assemblyContextName, isCollectible)
         {
-            // Save the path.
+            // Save the values.
             _baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            _dynamicDirectory = AppDomain.CurrentDomain.DynamicDirectory;
+            _relativeSearchDirectory = AppDomain.CurrentDomain.RelativeSearchPath;
+            _applicationDirectory = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 
             // Create the dependency resolver.
             _resolver = new AssemblyDependencyResolver(
@@ -99,8 +109,11 @@ namespace CG.Runtime
             bool isCollectible
             ) : base(isCollectible)
         {
-            // Save the path.
+            // Save the values.
             _baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            _dynamicDirectory = AppDomain.CurrentDomain.DynamicDirectory;
+            _relativeSearchDirectory = AppDomain.CurrentDomain.RelativeSearchPath;
+            _applicationDirectory = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 
             // Create the dependency resolver.
             _resolver = new AssemblyDependencyResolver(
@@ -116,8 +129,11 @@ namespace CG.Runtime
         /// </summary>
         public AssemblyLoader()
         {
-            // Save the path.
+            // Save the values.
             _baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            _dynamicDirectory = AppDomain.CurrentDomain.DynamicDirectory;
+            _relativeSearchDirectory = AppDomain.CurrentDomain.RelativeSearchPath;
+            _applicationDirectory = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 
             // Create the dependency resolver.
             _resolver = new AssemblyDependencyResolver(
@@ -165,19 +181,75 @@ namespace CG.Runtime
 
             // If we get here, we failed to resolve the assembly using the fancy
             //   schmancy .NET resolver object. Let's try to load it the old school
-            //   way, instead.
+            //   way, instead. Let's probe the base directory first, then the application 
+            //   directory, then the search directory, then the dynamic directory.
 
-            // Try to build a complete path to the file.
-            var completePath = Path.Combine(
-                _baseDirectory,
-                $"{assemblyName.Name}.dll"
-                );
-
-            // Does the file exist?
-            if (File.Exists(completePath))
+            // Do we have a base directory?
+            if (false == string.IsNullOrEmpty(_baseDirectory))
             {
-                // Try to load the assembly using the path.
-                return Assembly.LoadFrom(completePath);
+                // Try to build a complete path to the file.
+                var completePath = Path.Combine(
+                    _baseDirectory,
+                    $"{assemblyName.Name}.dll"
+                    );
+
+                // Does the file exist?
+                if (File.Exists(completePath))
+                {
+                    // Try to load the assembly using the path.
+                    return Assembly.LoadFrom(completePath);
+                }
+            }
+
+            // Do we have an application directory?
+            if (false == string.IsNullOrEmpty(_applicationDirectory))
+            {
+                // Try to build a complete path to the file.
+                var completePath = Path.Combine(
+                    _applicationDirectory,
+                    $"{assemblyName.Name}.dll"
+                    );
+
+                // Does the file exist?
+                if (File.Exists(completePath))
+                {
+                    // Try to load the assembly using the path.
+                    return Assembly.LoadFrom(completePath);
+                }
+            }
+
+            // Do we have a search directory?
+            if (false == string.IsNullOrEmpty(_relativeSearchDirectory))
+            {
+                // Try to build a complete path to the file.
+                var completePath = Path.Combine(
+                    _relativeSearchDirectory,
+                    $"{assemblyName.Name}.dll"
+                    );
+
+                // Does the file exist?
+                if (File.Exists(completePath))
+                {
+                    // Try to load the assembly using the path.
+                    return Assembly.LoadFrom(completePath);
+                }
+            }
+
+            // Do we have a dynamic directory?
+            if (false == string.IsNullOrEmpty(_dynamicDirectory))
+            {
+                // Try to build a complete path to the file.
+                var completePath = Path.Combine(
+                    _dynamicDirectory,
+                    $"{assemblyName.Name}.dll"
+                    );
+
+                // Does the file exist?
+                if (File.Exists(completePath))
+                {
+                    // Try to load the assembly using the path.
+                    return Assembly.LoadFrom(completePath);
+                }
             }
 
             // We failed to load the assembly.
