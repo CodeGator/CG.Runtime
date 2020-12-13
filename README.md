@@ -1,9 +1,10 @@
 # CG.Runtime: 
 ---
-[![Build Status](https://dev.azure.com/codegator/CG.Runtime/_apis/build/status/CodeGator.CG.Runtime?branchName=master)](https://dev.azure.com/codegator/CG.Runtime/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://dev.azure.com/codegator/CG.Runtime/_apis/build/status/CodeGator.CG.Runtime?branchName=main)](https://dev.azure.com/codegator/CG.Runtime/_build/latest?definitionId=39&branchName=main)
 [![Github docs](https://img.shields.io/static/v1?label=Documentation&message=online&color=blue)](https://codegator.github.io/CG.Runtime/)
 [![NuGet downloads](https://img.shields.io/nuget/dt/CG.Runtime.svg?style=flat)](https://nuget.org/packages/CG.Runtime)
-![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Runtime/1)
+![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Runtime/39)
+[![Github discussion](https://img.shields.io/badge/Discussion-online-blue)](https://github.com/CodeGator/CG.Runtime/discussions)
 
 #### What does it do?
 The package contains runtime extensions used by other CodeGator packages.
