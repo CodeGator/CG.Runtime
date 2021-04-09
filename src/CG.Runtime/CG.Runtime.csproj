@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <Authors>Martin Cook</Authors>
     <Company>CodeGator</Company>
     <Description>This package contains runtime extensions used by other CodeGator packages. 
 
 Platforms supported:
-      .NET Core 3.1 or above</Description>
+      .NET 5.x or above</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/CodeGator/CG.Runtime</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CodeGator/CG.Runtime</RepositoryUrl>
@@ -19,12 +19,12 @@ Platforms supported:
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netcoreapp3.1\CG.Runtime.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\5.0\CG.Runtime.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CG.Core" Version="2021.1.1" />
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.3.37">
+    <PackageReference Include="CG.Core" Version="2021.2.4" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.194">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
