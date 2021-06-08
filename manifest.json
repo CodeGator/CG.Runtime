@@ -13,30 +13,6 @@
       "is_incremental": false
     },
     {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Runtime.AssemblyLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Runtime.AssemblyLoader.html",
-          "hash": "iEnn1sDa5VuHG8lXriGLcdAhSDpvKl5OI1BfN342lPs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Runtime.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Runtime.html",
-          "hash": "lgkh0qM4NnlzGSKlq3pd/dJtUshObhHxu9Qy7MUwFuU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
@@ -49,12 +25,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "zjto0txX5F7oAkj0wfGelf4RZzVAfWHPC7Gt8vGVqn8="
+          "hash": "n+HfZL3mOX8Yn2xm8apoiB7B0XTRnlTmkQuAY2hpJOI="
         }
       },
       "is_incremental": false,
@@ -141,12 +120,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "XK7r8bjpDCCuK1gVQerLdfXMrhPcFbr5r9rt0vm0meY="
+          "hash": "tHHnz1IPu//thwDv93lKDwSRf4kdEahjPrNDo2MLOTc="
         }
       },
       "is_incremental": false,
@@ -168,12 +150,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 2,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
