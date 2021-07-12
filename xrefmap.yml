@@ -1,3 +1,72 @@
 ### YamlMime:XRefMap
 sorted: true
-references: []
+references:
+- uid: CG.Runtime
+  name: CG.Runtime
+  href: api/CG.Runtime.html
+  commentId: N:CG.Runtime
+  fullName: CG.Runtime
+  nameWithType: CG.Runtime
+- uid: CG.Runtime.AssemblyLoader
+  name: AssemblyLoader
+  href: api/CG.Runtime.AssemblyLoader.html
+  commentId: T:CG.Runtime.AssemblyLoader
+  fullName: CG.Runtime.AssemblyLoader
+  nameWithType: AssemblyLoader
+- uid: CG.Runtime.AssemblyLoader.#ctor
+  name: AssemblyLoader()
+  href: api/CG.Runtime.AssemblyLoader.html#CG_Runtime_AssemblyLoader__ctor
+  commentId: M:CG.Runtime.AssemblyLoader.#ctor
+  fullName: CG.Runtime.AssemblyLoader.AssemblyLoader()
+  nameWithType: AssemblyLoader.AssemblyLoader()
+- uid: CG.Runtime.AssemblyLoader.#ctor(System.Boolean)
+  name: AssemblyLoader(Boolean)
+  href: api/CG.Runtime.AssemblyLoader.html#CG_Runtime_AssemblyLoader__ctor_System_Boolean_
+  commentId: M:CG.Runtime.AssemblyLoader.#ctor(System.Boolean)
+  fullName: CG.Runtime.AssemblyLoader.AssemblyLoader(System.Boolean)
+  nameWithType: AssemblyLoader.AssemblyLoader(Boolean)
+- uid: CG.Runtime.AssemblyLoader.#ctor(System.String,System.Boolean)
+  name: AssemblyLoader(String, Boolean)
+  href: api/CG.Runtime.AssemblyLoader.html#CG_Runtime_AssemblyLoader__ctor_System_String_System_Boolean_
+  commentId: M:CG.Runtime.AssemblyLoader.#ctor(System.String,System.Boolean)
+  fullName: CG.Runtime.AssemblyLoader.AssemblyLoader(System.String, System.Boolean)
+  nameWithType: AssemblyLoader.AssemblyLoader(String, Boolean)
+- uid: CG.Runtime.AssemblyLoader.#ctor(System.String,System.String,System.Boolean)
+  name: AssemblyLoader(String, String, Boolean)
+  href: api/CG.Runtime.AssemblyLoader.html#CG_Runtime_AssemblyLoader__ctor_System_String_System_String_System_Boolean_
+  commentId: M:CG.Runtime.AssemblyLoader.#ctor(System.String,System.String,System.Boolean)
+  fullName: CG.Runtime.AssemblyLoader.AssemblyLoader(System.String, System.String, System.Boolean)
+  nameWithType: AssemblyLoader.AssemblyLoader(String, String, Boolean)
+- uid: CG.Runtime.AssemblyLoader.#ctor*
+  name: AssemblyLoader
+  href: api/CG.Runtime.AssemblyLoader.html#CG_Runtime_AssemblyLoader__ctor_
+  commentId: Overload:CG.Runtime.AssemblyLoader.#ctor
+  isSpec: "True"
+  fullName: CG.Runtime.AssemblyLoader.AssemblyLoader
+  nameWithType: AssemblyLoader.AssemblyLoader
+- uid: CG.Runtime.AssemblyLoader.Load(System.Reflection.AssemblyName)
+  name: Load(AssemblyName)
+  href: api/CG.Runtime.AssemblyLoader.html#CG_Runtime_AssemblyLoader_Load_System_Reflection_AssemblyName_
+  commentId: M:CG.Runtime.AssemblyLoader.Load(System.Reflection.AssemblyName)
+  fullName: CG.Runtime.AssemblyLoader.Load(System.Reflection.AssemblyName)
+  nameWithType: AssemblyLoader.Load(AssemblyName)
+- uid: CG.Runtime.AssemblyLoader.Load*
+  name: Load
+  href: api/CG.Runtime.AssemblyLoader.html#CG_Runtime_AssemblyLoader_Load_
+  commentId: Overload:CG.Runtime.AssemblyLoader.Load
+  isSpec: "True"
+  fullName: CG.Runtime.AssemblyLoader.Load
+  nameWithType: AssemblyLoader.Load
+- uid: CG.Runtime.AssemblyLoader.LoadUnmanagedDll(System.String)
+  name: LoadUnmanagedDll(String)
+  href: api/CG.Runtime.AssemblyLoader.html#CG_Runtime_AssemblyLoader_LoadUnmanagedDll_System_String_
+  commentId: M:CG.Runtime.AssemblyLoader.LoadUnmanagedDll(System.String)
+  fullName: CG.Runtime.AssemblyLoader.LoadUnmanagedDll(System.String)
+  nameWithType: AssemblyLoader.LoadUnmanagedDll(String)
+- uid: CG.Runtime.AssemblyLoader.LoadUnmanagedDll*
+  name: LoadUnmanagedDll
+  href: api/CG.Runtime.AssemblyLoader.html#CG_Runtime_AssemblyLoader_LoadUnmanagedDll_
+  commentId: Overload:CG.Runtime.AssemblyLoader.LoadUnmanagedDll
+  isSpec: "True"
+  fullName: CG.Runtime.AssemblyLoader.LoadUnmanagedDll
+  nameWithType: AssemblyLoader.LoadUnmanagedDll
