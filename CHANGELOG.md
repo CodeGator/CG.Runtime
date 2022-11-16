@@ -1,6 +1,11 @@
 # CG.Runtime change log
 ---
 
+## 2023.1
+
+* I standardized a bunch of namespaces so they use .NET namespaces, instead of codegator namespaces.
+* bug fixes
+
 ## 2022.1
 
 * I switched the runtime to .net 6.0
